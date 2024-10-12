@@ -1,0 +1,51 @@
+/* next week, we'll add animtion */
+.toast {
+    border-radius: 5px;
+    max-width: 80vw;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #263238;
+    color: #fff;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 90%;
+    z-index: 5100;
+  
+    /* animate it */
+    /* by default is should be out */
+    transform: translateY(calc(100% + 10px));
+    transition: transform 0.2s ease-in-out;
+  }
+  .toast.inview {
+    transform: translateY(0);
+  }
+  
+  .text {
+    padding: 20px;
+    flex-basis: 100%;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: inherit;
+  }
+  
+  .buttons {
+    display: flex;
+  }
+  .toast.warning {
+    background-color: var(--sh-yellow);
+    color: #263238;
+  }
+  .toast.error {
+    background-color: var(--sh-red);
+  }
+  .toast.success {
+    background-color: var(--sh-green);
+  }
